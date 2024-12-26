@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<infocenter_data version="1.0">
+  <iar_name>USB host audio</iar_name>                                                                      <!--App-->
+  <iar_description>This example application demonstrates playing .wav files from an SD card
+that is formatted with a FAT file system using USB host audio class.</iar_description>   <!--App short description-->
+  <iar_curdir>$CUR_DIR$</iar_curdir>
+</infocenter_data>

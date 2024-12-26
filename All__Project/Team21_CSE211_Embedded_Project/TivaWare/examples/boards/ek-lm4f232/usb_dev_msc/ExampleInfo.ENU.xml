@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<infocenter_data version="1.0">
+  <iar_name>USB MSC Device</iar_name>                                                                      <!--App-->
+  <iar_description>This example application turns the evaluation board into a USB mass storage class device.</iar_description>   <!--App short description-->
+  <iar_curdir>$CUR_DIR$</iar_curdir>
+</infocenter_data>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<infocenter_data version="1.0">
+  <iar_name>USB HID Keyboard Host</iar_name>                                                                      <!--App-->
+  <iar_description>This example application demonstrates how to support a USB keyboard
+attached to the evaluation kit board.</iar_description>   <!--App short description-->
+  <iar_curdir>$CUR_DIR$</iar_curdir>
+</infocenter_data>

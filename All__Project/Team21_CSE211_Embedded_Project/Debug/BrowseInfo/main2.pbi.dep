@@ -1,0 +1,11 @@
+D:\embedded\ _labs\lab3\Debug\BrowseInfo\main2.pbi: \
+  D:\embedded\ _labs\lab3\main2.c D:\embedded\ _labs\lab3/DIO.h \
+  D:\embedded\ _labs\lab3/tm4c123gh6pm.h \
+  D:\embedded\ _labs\lab3/bitwise_operations.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdint.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ycheck.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\yvals.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Defaults.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Config_Normal.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Product.h \
+  D:\embedded\ _labs\lab3/TM4C123GH6PM.h

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<infocenter_data version="1.0">
+  <iar_name>Watchdog</iar_name>                                   <!--App-->
+  <iar_description>This example application demonstrates the use of the watchdog as a simple heartbeat for the system</iar_description>                     <!--App short description-->
+  <iar_curdir>$CUR_DIR$</iar_curdir>
+</infocenter_data>

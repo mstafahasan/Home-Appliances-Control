@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exampleInfo>
+  <copyDir>..\drivers</copyDir>
+  <copyDir>..\..\..\..\inc</copyDir>
+  <copyDir>..\..\..\..\driverlib</copyDir>
+  <copyDir>..\..\..\..\utils</copyDir>
+  <copyDir>..\..\..\..\third_party\FreeRTOS\License</copyDir>
+  <copyDir>..\..\..\..\third_party\FreeRTOS\Source</copyDir>
+  <copyDir>..\..\..\..\third_party\FreeRTOS\TraceCon</copyDir>
+</exampleInfo>

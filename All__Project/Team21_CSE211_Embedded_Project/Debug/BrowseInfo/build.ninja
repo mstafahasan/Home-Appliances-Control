@@ -1,0 +1,61 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe $flags
+
+rule MAKEBROWSE
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe $flags
+
+rule PDBLINK
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe $flags
+
+
+
+#Build steps
+build C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\DIO.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\DIO.c -xcl_file C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\DIO.xcl -macro_file C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\DIO.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\DIO.c -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -Ol --predef_macros C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\DIO.tmp
+  rspfile_name = C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\DIO.xcl.rsp
+
+build C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\main.c -xcl_file C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\main.xcl -macro_file C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\main.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\main.c -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -Ol --predef_macros C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\main.tmp
+  rspfile_name = C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\main.xcl.rsp
+
+build C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\systick.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\systick.c -xcl_file C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\systick.xcl -macro_file C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\systick.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\systick.c -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -Ol --predef_macros C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\systick.tmp
+  rspfile_name = C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\systick.xcl.rsp
+
+build C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\DIO.pbi : INDEXER C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\DIO.xcl |  $
+C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\DIO.c
+  flags = -out=C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\DIO.pbi -f C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\DIO.xcl
+
+build C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\main.pbi : INDEXER C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\main.xcl |  $
+C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\main.c
+  flags = -out=C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\main.pbi -f C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\main.xcl
+
+build C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\systick.pbi : INDEXER C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\systick.xcl |  $
+C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\systick.c
+  flags = -out=C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\systick.pbi -f C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\systick.xcl
+
+build C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\lab3.pbw : MAKEBROWSE C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\lab3.pbd
+  flags = C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\lab3.pbd -output C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\lab3.pbw
+
+build C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\lab3.pbd : PDBLINK C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\DIO.pbi |  $
+C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\main.pbi $
+C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\systick.pbi
+  flags = -M C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\lab3.pbd C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\DIO.pbi C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\main.pbi C$:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\BrowseInfo\systick.pbi
+

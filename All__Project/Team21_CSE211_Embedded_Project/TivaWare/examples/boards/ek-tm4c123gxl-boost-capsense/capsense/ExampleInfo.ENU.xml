@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<infocenter_data version="1.0">
+  <iar_name>Capacitive Touch Example</iar_name>                                                                      <!--App-->
+  <iar_description>An example that works with the 430BOOST-SENSE1 capactive sense 
+BoosterPack, originally designed for the MSP430 LaunchPad.</iar_description>   <!--App short description-->
+  <iar_curdir>$CUR_DIR$</iar_curdir>
+</infocenter_data>

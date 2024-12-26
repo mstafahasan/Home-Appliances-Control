@@ -1,0 +1,315 @@
+###############################################################################
+#
+# IAR ELF Linker V9.10.1.308/W64 for ARM                  26/Dec/2024  11:52:51
+# Copyright 2007-2021 IAR Systems AB.
+#
+#    Output file  =
+#        C:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\Exe\lab3.out
+#    Map file     =
+#        C:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\List\lab3.map
+#    Command line =
+#        -f
+#        C:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\Exe\lab3.out.rsp
+#        (C:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\Obj\DIO.o
+#        C:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\Obj\main.o
+#        C:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\Obj\systick.o
+#        --no_out_extension -o
+#        C:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\Exe\lab3.out
+#        --map
+#        C:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\List\lab3.map
+#        --config "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\config\linker\TexasInstruments\TM4C123GH6.icf" --semihosting
+#        C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\ewarm\Exe\driverlib.a
+#        --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** MESSAGES
+***
+
+Warning[Lt009]: Inconsistent wchar_t size
+            gpio.o(driverlib.a) and 4 other objects in driverlib.a have wchar_t
+                      size 16 bits
+            DIO.o and 20 other objects, some of them in dl7M_tln.a and 11 other
+                      libraries have wchar_t size 32 bits
+
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x3'ffff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'7fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                        0x40
+  .intvec            ro code          0x0    0x40  vector_table_M.o [5]
+                                   - 0x40    0x40
+
+"P1":                                      0x11bc
+  .text              ro code         0x40   0x548  main.o [1]
+  .text              ro code        0x588   0x2e4  sysctl.o [3]
+  .text              ro code        0x86c   0x2f4  gpio.o [3]
+  .text              ro code        0xb60    0xb0  uart.o [3]
+  .text              ro code        0xc10    0x44  snprintf.o [2]
+  .text              ro code        0xc54    0x56  ABImemcpy_unaligned.o [5]
+  .text              ro code        0xcaa    0x2a  copy_init3.o [5]
+  .text              ro code        0xcd4    0x66  ABImemset.o [5]
+  .text              ro code        0xd3a    0x1a  xsnprout.o [2]
+  .text              ro code        0xd54    0x12  strcmp.o [5]
+  .text              ro code        0xd66     0xa  isdigit.o [2]
+  .text              ro code        0xd70   0x150  iar_Stoulx.o [2]
+  .text              ro code        0xec0   0x136  xprintftiny.o [2]
+  .text              ro code        0xff6     0x2  vectortrap_M.o [5]
+  .text              ro code        0xff8    0x58  memchr.o [5]
+  .text              ro code       0x1050    0x36  strlen.o [5]
+  .rodata            const         0x1088    0x50  iar_Stoulx.o [2]
+  .text              ro code       0x10d8    0x28  data_init.o [5]
+  .text              ro code       0x1100    0x22  fpinit_M.o [4]
+  .iar.init_table    const         0x1124    0x14  - Linker created -
+  .text              ro code       0x1138    0x1e  cmain.o [5]
+  .text              ro code       0x1156     0x4  low_level_init.o [2]
+  .text              ro code       0x115a     0x4  exit.o [2]
+  .text              ro code       0x1160     0xa  cexit.o [5]
+  .text              ro code       0x116c    0x14  exit.o [6]
+  .text              ro code       0x1180    0x1c  cstartup_M.o [5]
+  .rodata            const         0x119c    0x18  main.o [1]
+  .rodata            const         0x11b4    0x18  main.o [1]
+  .rodata            const         0x11cc    0x14  main.o [1]
+  .rodata            const         0x11e0     0xc  main.o [1]
+  .rodata            const         0x11ec     0x8  main.o [1]
+  Initializer bytes  const         0x11f4     0x8  <for P2-1>
+  .rodata            const         0x11fc     0x0  copy_init3.o [5]
+                                 - 0x11fc  0x11bc
+
+"P2", part 1 of 2:                            0x8
+  P2-1                        0x2000'0000     0x6  <Init block>
+    .data            inited   0x2000'0000     0x4  main.o [1]
+    .bss             inited   0x2000'0004     0x1  main.o [1]
+    .bss             inited   0x2000'0005     0x1  main.o [1]
+                            - 0x2000'0006     0x6
+
+"P2", part 2 of 2:                         0x1000
+  CSTACK                      0x2000'0008  0x1000  <Block>
+    CSTACK           uninit   0x2000'0008  0x1000  <Block tail>
+                            - 0x2000'1008  0x1000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+       0x11fc     0x3'ffff  0x3'ee04
+  0x2000'1008  0x2000'7fff    0x6ff8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy (__iar_copy_init3)
+    1 source range, total size 0x8 (133% of destination):
+               0x11f4   0x8
+    1 destination range, total size 0x6:
+          0x2000'0000   0x6
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                 ro code  ro data  rw data
+    ------                 -------  -------  -------
+command line/config:
+    ------------------------------------------------
+    Total:
+
+C:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\Obj: [1]
+    main.o                   1'352       94        6
+    ------------------------------------------------
+    Total:                   1'352       94        6
+
+dl7M_tln.a: [2]
+    exit.o                       4
+    iar_Stoulx.o               336       80
+    isdigit.o                   10
+    low_level_init.o             4
+    snprintf.o                  68
+    xprintftiny.o              310
+    xsnprout.o                  26
+    ------------------------------------------------
+    Total:                     758       80
+
+driverlib.a: [3]
+    gpio.o                     756
+    sysctl.o                   740
+    uart.o                     176
+    ------------------------------------------------
+    Total:                   1'672
+
+m7M_tls.a: [4]
+    fpinit_M.o                  34
+    ------------------------------------------------
+    Total:                      34
+
+rt7M_tl.a: [5]
+    ABImemcpy_unaligned.o       86
+    ABImemset.o                102
+    cexit.o                     10
+    cmain.o                     30
+    copy_init3.o                42
+    cstartup_M.o                28
+    data_init.o                 40
+    memchr.o                    88
+    strcmp.o                    18
+    strlen.o                    54
+    vector_table_M.o            64
+    vectortrap_M.o               2
+    ------------------------------------------------
+    Total:                     564
+
+shb_l.a: [6]
+    exit.o                      20
+    ------------------------------------------------
+    Total:                      20
+
+    Gaps                         4        4
+    Linker created                       22    4'096
+----------------------------------------------------
+    Grand Total:             4'404      200    4'102
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base        0x1124          --   Gb  - Linker created -
+.iar.init_table$$Limit       0x1138          --   Gb  - Linker created -
+?main                        0x1139         Code  Gb  cmain.o [5]
+BusFault_Handler              0xff7         Code  Wk  vectortrap_M.o [5]
+CSTACK$$Base            0x2000'0008          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'1008          --   Gb  - Linker created -
+DebugMon_Handler              0xff7         Code  Wk  vectortrap_M.o [5]
+GPIODirModeSet                0x86d   0x28  Code  Gb  gpio.o [3]
+GPIOPadConfigSet              0x895  0x174  Code  Gb  gpio.o [3]
+GPIOPinConfigure              0xa6d   0x38  Code  Gb  gpio.o [3]
+GPIOPinRead                   0xa09    0x6  Code  Gb  gpio.o [3]
+GPIOPinTypeGPIOInput          0xa19   0x14  Code  Gb  gpio.o [3]
+GPIOPinTypeGPIOOutput         0xa2d    0xa  Code  Gb  gpio.o [3]
+GPIOPinTypeUART               0xa51   0x14  Code  Gb  gpio.o [3]
+GPIOPinWrite                  0xa0f    0x6  Code  Gb  gpio.o [3]
+GPIOUnlockPin                 0xaad    0xe  Code  Gb  gpio.o [3]
+HandleTemperature             0x24d   0xb2  Code  Gb  main.o [1]
+HardFault_Handler             0xff7         Code  Wk  vectortrap_M.o [5]
+InitializeAlarm               0x15f   0x2e  Code  Gb  main.o [1]
+InitializeSensor              0x131   0x2e  Code  Gb  main.o [1]
+MemManage_Handler             0xff7         Code  Wk  vectortrap_M.o [5]
+MicrosecondDelay              0x18d   0x22  Code  Gb  main.o [1]
+MillisecondDelay              0x1af   0x22  Code  Gb  main.o [1]
+NMI_Handler                   0xff7         Code  Wk  vectortrap_M.o [5]
+PendSV_Handler                0xff7         Code  Wk  vectortrap_M.o [5]
+PortD_Init                     0x41   0x30  Code  Gb  main.o [1]
+PortF_Init                     0x71   0x44  Code  Gb  main.o [1]
+ReadSensorData                0x2ff  0x102  Code  Gb  main.o [1]
+Region$$Table$$Base          0x1124          --   Gb  - Linker created -
+Region$$Table$$Limit         0x1138          --   Gb  - Linker created -
+SVC_Handler                   0xff7         Code  Wk  vectortrap_M.o [5]
+StopAlarm                     0x203   0x4a  Code  Gb  main.o [1]
+SysCtlClockGet                0x6a5  0x110  Code  Gb  sysctl.o [3]
+SysCtlClockSet                0x5cd   0xd8  Code  Gb  sysctl.o [3]
+SysCtlDelay                   0x5c5    0x8  Code  Gb  sysctl.o [3]
+SysCtlPeripheralEnable        0x5a9    0x8  Code  Gb  sysctl.o [3]
+SysCtlPeripheralReady         0x589    0x8  Code  Gb  sysctl.o [3]
+SysTick_Handler               0xff7         Code  Wk  vectortrap_M.o [5]
+TransmitTemperature           0x1d1   0x32  Code  Gb  main.o [1]
+UART0_Init                     0xb5   0x60  Code  Gb  main.o [1]
+UARTCharGetNonBlocking        0xbf9    0xe  Code  Gb  uart.o [3]
+UARTCharPut                   0xc07    0xa  Code  Gb  uart.o [3]
+UARTCharsAvail                0xbe9    0x6  Code  Gb  uart.o [3]
+UARTConfigSetExpClk           0xb61   0x4c  Code  Gb  uart.o [3]
+UARTDisable                   0xbc7   0x1e  Code  Gb  uart.o [3]
+UARTEnable                    0xbad   0x1a  Code  Gb  uart.o [3]
+UsageFault_Handler            0xff7         Code  Wk  vectortrap_M.o [5]
+_PrintfTiny                   0xed9  0x11e  Code  Gb  xprintftiny.o [2]
+_SNProut                      0xd3b   0x1a  Code  Gb  xsnprout.o [2]
+__aeabi_memset                0xcd5         Code  Gb  ABImemset.o [5]
+__cmain                      0x1139         Code  Gb  cmain.o [5]
+__exit                       0x116d   0x14  Code  Gb  exit.o [6]
+__iar_Memchr                  0xff9         Code  Gb  memchr.o [5]
+__iar_Memset                  0xcd5         Code  Gb  ABImemset.o [5]
+__iar_Memset_word             0xcdd         Code  Gb  ABImemset.o [5]
+__iar_Stoulx                  0xd71  0x13e  Code  Gb  iar_Stoulx.o [2]
+__iar_copy_init3              0xcab   0x2a  Code  Gb  copy_init3.o [5]
+__iar_data_init3             0x10d9   0x28  Code  Gb  data_init.o [5]
+__iar_init_vfp               0x1101         Code  Gb  fpinit_M.o [4]
+__iar_program_start          0x1181         Code  Gb  cstartup_M.o [5]
+__iar_unaligned_memcpy4
+                              0xc55         Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_unaligned_memcpy8
+                              0xc55         Code  Gb  ABImemcpy_unaligned.o [5]
+__low_level_init             0x1157    0x4  Code  Gb  low_level_init.o [2]
+__vector_table                  0x0         Data  Gb  vector_table_M.o [5]
+_call_main                   0x1145         Code  Gb  cmain.o [5]
+_exit                        0x1161         Code  Gb  cexit.o [5]
+alarmActive             0x2000'0004    0x1  Data  Gb  main.o [1]
+alarmOverride           0x2000'0005    0x1  Data  Gb  main.o [1]
+atoi                          0xeb5    0x2  Code  Gb  iar_Stoulx.o [2]
+delay_ms                      0x115   0x1c  Code  Gb  main.o [1]
+digits                       0x10b0   0x28  Data  Lc  iar_Stoulx.o [2]
+exit                         0x115b    0x4  Code  Gb  exit.o [2]
+g_pui32GPIOBaseAddrs          0xad0   0x90  Data  Lc  gpio.o [3]
+g_pui32Xtals                  0x800   0x6c  Data  Lc  sysctl.o [3]
+isdigit                       0xd67    0xa  Code  Gb  isdigit.o [2]
+main                          0x401  0x13a  Code  Gb  main.o [1]
+memchr                        0xff9         Code  Gb  memchr.o [5]
+ndigs                        0x1088   0x28  Data  Lc  iar_Stoulx.o [2]
+out                           0xec1   0x18  Code  Lc  xprintftiny.o [2]
+snprintf                      0xc11   0x44  Code  Gb  snprintf.o [2]
+strcmp                        0xd55         Code  Gb  strcmp.o [5]
+strlen                       0x1051         Code  Gb  strlen.o [5]
+temperatureThreshold    0x2000'0000    0x4  Data  Gb  main.o [1]
+
+
+[1] = C:\Users\dolab\Desktop\Senior-1\Embedded\Labs\lab3\Debug\Obj
+[2] = dl7M_tln.a
+[3] = driverlib.a
+[4] = m7M_tls.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  4'404 bytes of readonly  code memory
+    200 bytes of readonly  data memory
+  4'102 bytes of readwrite data memory
+
+Errors: none
+Warnings: 1

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<infocenter_data version="1.0">
+  <iar_name>USB HID Keyboard Device</iar_name>                                   <!--App-->
+  <iar_description>This example application turns the evaluation board into a USB keyboard supporting the Human Interface Device class</iar_description>                     <!--App short description-->
+  <iar_curdir>$CUR_DIR$</iar_curdir>
+</infocenter_data>

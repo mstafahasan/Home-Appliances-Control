@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<infocenter_data version="1.0">
+  <iar_name>USB Mass Storage Class Host Example</iar_name>                                   <!--App-->
+  <iar_description>This example application demonstrates reading a file system from a USB flash disk</iar_description>                     <!--App short description-->
+  <iar_curdir>$CUR_DIR$</iar_curdir>
+</infocenter_data>
