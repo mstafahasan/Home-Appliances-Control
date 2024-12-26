@@ -201,13 +201,40 @@ This function reads temperature and humidity from a DHT sensor:
 - Lamp Holder
 
 ### 7. Wiring Diagram
-(Insert wiring diagram here)
+![image](https://github.com/user-attachments/assets/9ca90468-adcd-48dd-9a7b-a5797d3bb2d7)
 
-### 8. Prototype Photos
-(Insert prototype photos here)
+
+### 9. Problems Faced and How We Managed to Solve Them
 
 ### 9. Problems Faced and How We Managed to Solve Them
 
 **1. Misunderstanding of Relay Connections**
 - **Problem**:
-    We encountered a misunderstanding regarding the relay connection. Specifically, we were
+    We encountered a misunderstanding regarding the relay connection. Specifically, we were unsure whether the relay should be connected to the "normally open" (NO) or "normally closed" (NC) terminal.
+- **Reason**:
+    The ambiguity arose from a lack of clear documentation and experience with the relay module connections.
+- **Result**:
+    The relay did not switch correctly, leading to operational issues with the lamp control.
+- **Solution**:
+    We reviewed the relay module's datasheet and experimented with both terminals. Eventually, we found that connecting to the "normally open" (NO) terminal provided the desired control.
+
+**2. Issues with LM35 Sensor**
+- **Problem**:
+    The LM35 temperature sensor provided random and inaccurate readings. Additionally, the sensor short-circuited during the testing phase.
+- **Reason**:
+    The random readings were likely caused by electrical noise or incorrect connections. The short circuit occurred due to an accidental voltage spike or miswiring.
+- **Result**:
+    The temperature readings were unreliable, which rendered the system ineffective for monitoring temperature. The short circuit also damaged the sensor, necessitating a replacement.
+- **Solution**:
+    We replaced the LM35 sensor with a DHT11 sensor, which offered more stable and accurate temperature readings. This change also improved the overall reliability of the system.
+
+**3. Integration with the GUI**
+- **Problem**:
+    When integrating the door sensor and the temperature sensor with the GUI, the status would intermittently show "unknown" instead of the correct values.
+- **Reason**:
+    The issue was caused by the simultaneous querying of both sensors. The system attempted to send and receive data for both sensors at the same time, which led to communication conflicts and occasional data loss.
+- **Result**:
+    The GUI displayed incorrect or missing statuses for the sensors, which diminished the usability of the system.
+- **Solution**:
+    We implemented a delay between the readings of each sensor. By staggering the queries and allowing a brief pause between them, we ensured that the readings for both the door sensor and the temperature sensor were received and displayed correctly.
+
