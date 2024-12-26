@@ -3,12 +3,7 @@
 
 ## Project Report
 
-### Team Members
-- Mazen Saeed Mohamed (21P0125)
-- Youssef Habil Abou Elkhier (21P0187)
-- Sara Mohamed Ashour (21P0337)
-- Mostafa Hassan Mohamed (21P0349)
-- Adel Mohamed Adel (21P0113)
+
 
 ### Table of Contents
 1. [Project Description](#project-description)
